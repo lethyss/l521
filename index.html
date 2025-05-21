@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>温馨爱心页面</title>
+    <!-- 引入Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- 引入Font Awesome图标 -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Ma+Shan+Zheng&display=swap');
+        .heart-beat {
+            animation: heartbeat 1.5s ease-in-out infinite;
+        }
+        
+        @keyframes heartbeat {
+            0% {
+                transform: scale(1);
+            }
+            25% {
+                transform: scale(1.1);
+            }
+            50% {
+                transform: scale(1);
+            }
+            75% {
+                transform: scale(1.1);
+            }
+            100% {
+                transform: scale(1);
+            }
+        }
+        
+        .love-font {
+            font-family: 'Ma Shan Zheng', cursive;
+        }
+        
+        .bg-love-gradient {
+            background: linear-gradient(135deg, #ffb6c1, #ffc0cb, #ffe4e1);
+        }
+        
+        .floating {
+            animation: floating 3s ease-in-out infinite;
+        }
+        
+        @keyframes floating {
+            0% {
+                transform: translateY(0px);
+            }
+            50% {
+                transform: translateY(-15px);
+            }
+            100% {
+                transform: translateY(0px);
+            }
+        }
+    </style>
+</head>
+
+<body class="bg-love-gradient min-h-screen flex flex-col items-center justify-center overflow-hidden">
+    <!-- 漂浮的小爱心背景 -->
+    <div class="absolute w-full h-full overflow-hidden pointer-events-none">
+        <div class="absolute text-pink-300 text-4xl floating" style="left: 10%; top: 20%; animation-delay: 0s;"><i class="fas fa-heart"></i></div>
+        <div class="absolute text-pink-200 text-2xl floating" style="left: 20%; top: 70%; animation-delay: 0.5s;"><i class="fas fa-heart"></i></div>
+        <div class="absolute text-pink-400 text-3xl floating" style="left: 30%; top: 40%; animation-delay: 1s;"><i class="fas fa-heart"></i></div>
+        <div class="absolute text-pink-300 text-xl floating" style="left: 70%; top: 20%; animation-delay: 1.5s;"><i class="fas fa-heart"></i></div>
+        <div class="absolute text-pink-100 text-2xl floating" style="left: 80%; top: 60%; animation-delay: 2s;"><i class="fas fa-heart"></i></div>
+        <div class="absolute text-pink-200 text-3xl floating" style="left: 55%; top: 30%; animation-delay: 2.5s;"><i class="fas fa-heart"></i></div>
+        <div class="absolute text-pink-400 text-xl floating" style="left: 15%; top: 50%; animation-delay: 3s;"><i class="fas fa-heart"></i></div>
+        <div class="absolute text-pink-300 text-2xl floating" style="left: 85%; top: 30%; animation-delay: 3.5s;"><i class="fas fa-heart"></i></div>
+    </div>
+
+    <!-- 主要内容卡片 -->
+    <div class="relative z-10 bg-white bg-opacity-80 rounded-2xl shadow-xl p-8 max-w-xl mx-4 backdrop-blur-sm transform transition-all hover:scale-105 duration-300">
+        <!-- 标题部分 -->
+        <div class="text-center mb-6">
+            <h1 class="love-font text-4xl md:text-5xl font-bold text-pink-500 mb-2">爱的告白</h1>
+            <div class="flex justify-center">
+                <i class="fas fa-heart text-pink-500 text-2xl mx-1 heart-beat"></i>
+                <i class="fas fa-heart text-pink-400 text-2xl mx-1 heart-beat" style="animation-delay: 0.2s;"></i>
+                <i class="fas fa-heart text-pink-500 text-2xl mx-1 heart-beat" style="animation-delay: 0.4s;"></i>
+            </div>
+        </div>
+
+        <!-- 爱心内容 -->
+        <div class="text-center mb-8">
+            <p class="text-lg md:text-xl text-gray-700 mb-4 love-font">
+                生命因你而精彩，世界因你而美丽。<br> 每一刻与你共度的时光，都是我生命中最珍贵的礼物。
+            </p>
+            <p class="text-lg md:text-xl text-gray-700 love-font">
+                愿我们的爱情，如春风般温柔，如夏日般热烈，<br> 如秋叶般绚烂，如冬雪般纯洁。
+            </p>
+        </div>
+
+        <!-- 大爱心图标 -->
+        <div class="flex justify-center my-6">
+            <div class="text-pink-500 text-7xl heart-beat">
+                <i class="fas fa-heart"></i>
+            </div>
+        </div>
+
+        <!-- 签名和日期 -->
+        <div class="text-center mt-8">
+            <p class="love-font text-xl text-pink-600 font-semibold">永远爱你的 ❤️</p>
+            <div class="flex items-center justify-center mt-2">
+                <i class="fas fa-calendar-heart text-pink-400 mr-2"></i>
+                <p class="text-gray-500 love-font">今日与永远</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- 底部装饰 -->
+    <div class="mt-8 text-center text-white">
+        <div class="flex space-x-4 mt-4">
+            <span class="bg-pink-400 bg-opacity-70 p-2 rounded-full">
+                <i class="fas fa-dove text-xl"></i>
+            </span>
+            <span class="bg-pink-500 bg-opacity-70 p-2 rounded-full">
+                <i class="fas fa-heart text-xl"></i>
+            </span>
+            <span class="bg-pink-400 bg-opacity-70 p-2 rounded-full">
+                <i class="fas fa-infinity text-xl"></i>
+            </span>
+        </div>
+    </div>
+</body>
+
+</html>
